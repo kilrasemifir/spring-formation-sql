@@ -36,6 +36,11 @@ public class FormationService {
 				.orElseThrow( ()->new ResponseStatusException(HttpStatus.NOT_FOUND));
 	}
 
+	/**
+	 * Retourne la liste des formations ayant pour description la valeur de l'argument description.
+	 * @param description
+	 * @return
+	 */
 	public List<Formation> trouverAvecLaDescription(String description) {
 		return repository.findByDescription(description);
 	}
